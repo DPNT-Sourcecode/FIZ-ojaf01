@@ -21,10 +21,27 @@ public class FizzBuzzSolution {
 
     }
 
+    boolean searchForADigit(Integer number, Integer search) {
+        while (number > 0) {
+            if (number % 10 == search) {
+                return true;
+            }
+
+            number = number/10;
+        }
+
+        return false;
+    }
+
+    public String fizzBuzz2(Integer number) {
+        
+    }
+
     public String fizzBuzz(Integer number) {
         return fizzBuzz1(number);
     }
 
 }
+
 
 
