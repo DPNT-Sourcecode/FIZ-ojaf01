@@ -14,5 +14,3 @@ public class HelloSolution {
         return hello2(friendName);
     }
 }
-
-

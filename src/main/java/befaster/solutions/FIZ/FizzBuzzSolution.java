@@ -34,7 +34,22 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz2(Integer number) {
-        
+        String sol = new String();
+        boolean isFizz = false;
+        if (number % 3 == 0 && searchForADigit(number, 3)) {
+            sol += "fizz";
+            isFizz = true;
+        }
+
+        if (number % 5 == 0 && searchForADigit(number, 5)) {
+           if (isFizz) {
+               sol += " ";
+           }
+
+           sol += "buzz";
+        }
+
+
     }
 
     public String fizzBuzz(Integer number) {
@@ -42,6 +57,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
-
