@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SumSolutionTest {
+public class FizTest {
 	private FizzBuzzSolution fiz;
 
 	@BeforeEach
@@ -17,6 +17,7 @@ public class SumSolutionTest {
 
 	@Test
 	public void compute_sum() {
-		assertThat(sum.compute(1, 1), equalTo(2));
+		assertThat(fiz.fizzBuzz2(55), equalTo("buzz"));
 	}
 }
+
