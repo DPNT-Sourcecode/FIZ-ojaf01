@@ -20,5 +20,3 @@ public class FizTest {
 		assertThat(fiz.fizzBuzz3(55), equalTo("buzz deluxe"));
 	}
 }
-
-
