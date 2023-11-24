@@ -33,6 +33,20 @@ public class FizzBuzzSolution {
         return false;
     }
 
+    boolean identicalDigits(Integer number) {
+        Integer search = number % 10;
+        number /= 10;
+        while (number > 0) {
+            if (number % 10 != search) {
+                return false;
+            }
+
+            number = number / 10;
+        }
+
+        return true;
+    }
+
     public String fizzBuzz2(Integer number) {
         String sol = new String();
         boolean isFizz = false;
@@ -54,11 +68,42 @@ public class FizzBuzzSolution {
         return sol;
     }
 
+    public String fizzBuzz3(Integer number) {
+        String sol = new String();
+        boolean isFizz = false;
+        if (number % 3 == 0 || searchForADigit(number, 3)) {
+            sol += "fizz";
+            isFizz = true;
+        }
+
+        if (number % 5 == 0 || searchForADigit(number, 5)) {
+            if (isFizz) {
+                sol += " ";
+            }
+            sol += "buzz";
+            isFizz = true;
+        }
+
+        if (number > 10 && identicalDigits(number)) {
+            if (isFizz) {
+                sol += " ";
+            }
+
+            sol += "deluxe";
+        }
+
+        if (sol.isEmpty()) {
+            return number.toString();
+        }
+        return sol;
+    }
+
     public String fizzBuzz(Integer number) {
-        return fizzBuzz2(number);
+        return fizzBuzz3(number);
     }
 
 }
+
 
 
 
