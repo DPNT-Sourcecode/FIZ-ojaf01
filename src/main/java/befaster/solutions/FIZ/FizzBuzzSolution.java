@@ -102,9 +102,54 @@ public class FizzBuzzSolution {
         return sol;
     }
 
+    public String fizzBuzz4(Integer number) {
+        String sol = new String();
+        boolean isFizz = false;
+        if (number % 3 == 0 || searchForADigit(number, 3)) {
+            sol += "fizz";
+            isFizz = true;
+        }
+
+        if (number % 5 == 0 || searchForADigit(number, 5)) {
+            if (isFizz) {
+                sol += " ";
+            }
+            sol += "buzz";
+            isFizz = true;
+        }
+
+        boolean isDeluxe = false;
+        if (number % 3 == 0 && searchForADigit(number, 3)) {
+            isDeluxe = true;
+        }
+
+        if (number % 5 == 0 && searchForADigit(number, 5)) {
+            isDeluxe = true;
+        }
+
+        if (isDeluxe) {
+            if (isFizz) {
+                sol += " ";
+            }
+
+            if (number % 2 == 1) {
+                sol += "fake deluxe";
+            } else {
+                sol += "deluxe";
+            }
+        }
+
+
+        if (sol.isEmpty()) {
+            return number.toString();
+        }
+        return sol;
+    }
+
     public String fizzBuzz(Integer number) {
-        return fizzBuzz3(number);
+        return fizzBuzz4(number);
     }
 
 }
+
 
