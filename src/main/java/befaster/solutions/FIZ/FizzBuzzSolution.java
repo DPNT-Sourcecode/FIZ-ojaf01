@@ -55,9 +55,10 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        return fizzBuzz1(number);
+        return fizzBuzz2(number);
     }
 
 }
+
 
 
