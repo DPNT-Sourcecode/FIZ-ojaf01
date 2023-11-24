@@ -45,11 +45,13 @@ public class FizzBuzzSolution {
            if (isFizz) {
                sol += " ";
            }
-
            sol += "buzz";
         }
 
-
+        if (sol.isEmpty()) {
+            return number.toString();
+        }
+        return sol;
     }
 
     public String fizzBuzz(Integer number) {
@@ -57,3 +59,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
