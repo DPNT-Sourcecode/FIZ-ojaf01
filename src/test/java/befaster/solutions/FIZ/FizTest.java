@@ -17,6 +17,7 @@ public class FizTest {
 
 	@Test
 	public void compute_sum() {
-		assertThat(fiz.fizzBuzz3(55), equalTo("buzz deluxe"));
+		assertThat(fiz.fizzBuzz3(55), equalTo("buzz fake deluxe"));
 	}
 }
+

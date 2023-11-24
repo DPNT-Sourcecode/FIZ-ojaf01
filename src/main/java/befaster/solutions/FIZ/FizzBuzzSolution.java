@@ -89,7 +89,11 @@ public class FizzBuzzSolution {
                 sol += " ";
             }
 
-            sol += "deluxe";
+           if (number % 2 == 1) {
+               sol += "fake deluxe";
+           } else {
+               sol += "deluxe";
+           }
         }
 
         if (sol.isEmpty()) {
@@ -103,3 +107,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
