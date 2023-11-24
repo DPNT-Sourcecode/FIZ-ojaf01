@@ -17,13 +17,14 @@ public class FizzBuzzSolution {
             return "buzz";
         }
 
-        return number;
+        return String.valueOf(number);
 
     }
 
     public String fizzBuzz(Integer number) {
-        throw new SolutionNotImplementedException();
+        return fizzBuzz1(number);
     }
 
 }
+
 
